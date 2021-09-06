@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Pig Birthday</title>
+  
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/progres-bar.css">
+</head>
+<body>
+  <button>Colors</button>
+  <script type="text/javascript">
+  var color=["#48dbfb","	#F08080","#f6e58d","#7bed9f","#ffbe76","#55E6C1"];
+  var i=0;
+  document.querySelector("button").addEventListener("click",function(){
+i=i<color.length?++i:0;
+document.querySelector("body").style.background=color[i]
+  })
+  </script>
+  <canvas id="canvas"></canvas>
+  <script type="text/javascript" src="js/index.min.js"></script>
+      <canvas id="my-canvas"></canvas>
+      <script>
+        var confettiSettings = { target: 'my-canvas' };
+      var confetti = new ConfettiGenerator(confettiSettings);
+      confetti.render();
+      </script>
+  <div id="block_container"></div>
+  <header>
+    <div class="content">
+      <h1>Happy Birthday Bé Hêu Pon</h1>
+      <div class="countdown">00 : 00 : 00 : 00</div>
+    </div>
+  </header>
+  <script src="js/main.js"></script>
+</div>
+
+<div class="a1">
+  <div class="mediPlayer">
+    <audio class="listen" preload="none" data-size="250" src="audio/audio.mp3"></audio>
+  </div>
+
+<!-- Media Player / -->
+
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="js/player.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $('.mediPlayer').mediaPlayer();
+    });
+</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</div>
+
+<div class="a2">
+    <div class="img-slider">
+      <div class="slide active">
+        <img src="img/1.jpg" alt="">
+        <div class="info">
+          <h2>First gifts</h2>
+        </div>
+      </div>
+      <div class="slide">
+        <img src="img/2.jpg" alt="">
+        <div class="info">
+          <h2>First date</h2>
+        </div>
+      </div>
+      <div class="slide">
+        <img src="img/3.jpg" alt="">
+        <div class="info">
+          <h2>First trip</h2>
+        </div>
+      </div>
+      <div class="slide">
+        <img src="img/4.jpg" alt="">
+        <div class="info">
+          <h2>Best wishes for you</h2>
+        </div>
+      </div>
+      <div class="slide">
+        <img src="img/5.jpg" alt="">
+        <div class="info">
+          <h2>Love you to the moon and back</h2>
+        </div>
+      </div>
+      <div class="navigation">
+        <div class="btn active"></div>
+        <div class="btn"></div>
+        <div class="btn"></div>
+        <div class="btn"></div>
+        <div class="btn"></div>
+      </div>
+    </div>
+   
+    <script type="text/javascript">
+    var slides = document.querySelectorAll('.slide');
+    var btns = document.querySelectorAll('.btn');
+    let currentSlide = 1;
+
+    // Javascript for image slider manual navigation
+    var manualNav = function(manual){
+      slides.forEach((slide) => {
+        slide.classList.remove('active');
+
+        btns.forEach((btn) => {
+          btn.classList.remove('active');
+        });
+      });
+
+      slides[manual].classList.add('active');
+      btns[manual].classList.add('active');
+    }
+
+    btns.forEach((btn, i) => {
+      btn.addEventListener("click", () => {
+        manualNav(i);
+        currentSlide = i;
+      });
+    });
+
+    // Javascript for image slider autoplay navigation
+    var repeat = function(activeClass){
+      let active = document.getElementsByClassName('active');
+      let i = 1;
+
+      var repeater = () => {
+        setTimeout(function(){
+          [...active].forEach((activeSlide) => {
+            activeSlide.classList.remove('active');
+          });
+
+        slides[i].classList.add('active');
+        btns[i].classList.add('active');
+        i++;
+
+        if(slides.length == i){
+          i = 0;
+        }
+        if(i >= slides.length){
+          return;
+        }
+        repeater();
+      }, 5000);
+      }
+      repeater();
+    }
+    repeat();
+    </script>
+   </div>
+
+</body>
+</html>
